@@ -9,16 +9,10 @@ function activateGallery() {
 		// Preload large images.
 		let newImageSrc = thumbnail.dataset.largeVersion;
 		let largeVersion = new Image();
-		largeVersion.src = newImageSrc;	
-			
-		thumbnail.addEventListener("click", function() {
-			// Preload large images.
-			let newImageSrc = thumbnail.dataset.largeVersion;
-			let largeVersion = new Image();
-			largeVersion.src = newImageSrc;
+		largeVersion.src = newImageSrc;		
 
+		thumbnail.addEventListener("click", function() {
 			// Set clicked image as main image.
-			
 			let newImageAlt = thumbnail.alt;
 
 			mainImage.setAttribute("src", newImageSrc);
